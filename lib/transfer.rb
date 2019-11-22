@@ -18,7 +18,7 @@ class Transfer
       if @sender.valid? && @receiver.valid? == true  && sender.balance > amount
         @sender.balance -= @amount
         @receiver.balance += @amount
-        @status = "complete"
+        self.status = "complete"
       elsif @status == "complete"
         return "Transaction was already exucted"
       else
