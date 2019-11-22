@@ -8,6 +8,12 @@ class Transfer
       @amount = amount
     end
 
-    
+    def valid?
+      if sender.status.valid && receiver.status.valid == "true"
+        return true
+      else
+        return false
+      end
+    end
 
 end
