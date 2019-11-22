@@ -18,7 +18,7 @@ class Transfer
 
     def execute_transaction
       if sender.amount > sender.balance || sender.valid? == false
-        return "Insuffiecent Funds"
+        return false && puts "Insuffiecent Funds"
       else
         receiver.balance += sender.amount
       end
