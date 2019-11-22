@@ -13,7 +13,7 @@ class BankAccount
     end
 
     def display_balance
-      puts ("Your balance is #{@balance}.")
+      print "Your balance is #{self.balance}."
     end
 
     def valid?
