@@ -9,7 +9,7 @@ class Transfer
     end
 
     def valid?
-      if sender.status.valid && receiver.status.valid == "true"
+      if sender.status.valid && receiver.status.valid == true
         return true
       else
         return false
