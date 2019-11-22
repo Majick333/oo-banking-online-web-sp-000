@@ -20,7 +20,7 @@ class Transfer
       if sender.amount > sender.balance || sender.valid? == false
         return "Insuffiecent Funds"
       else
-        receiver.balance << sender.amount
+        receiver.balance += sender.amount
       end
     end
 
