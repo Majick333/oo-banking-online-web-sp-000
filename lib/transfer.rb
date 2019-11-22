@@ -16,4 +16,13 @@ class Transfer
       end
     end
 
+    def execute_transaction
+      if sender.amount > sender.balance || sender.valid? == false
+        return "Insuffiecent Funds"
+      end
+    end
+
+
+
+
 end
