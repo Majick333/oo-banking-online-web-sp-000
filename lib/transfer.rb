@@ -9,19 +9,18 @@ class Transfer
     end
 
     def valid?
-      if sender.valid? && receiver.valid? == true
-        return true
-      else
-        return false
+      if @sender.valid? && @receiver.valid? ? true : false
       end
     end
 
     def execute_transaction
-      if sender.amount > sender.balance || sender.valid? == false
-        return false
-        puts "insuffieceint funds"
+      if @sender.balance > @amount && @status == "pending"
+        @sender.balance -= @amount
+        @receiver.balance += @amount
+        @status = "complete"
       else
-        receiver.balance += sender.amount
+        @status = "rejected"
+        return "Transaction rejected"
       end
     end
 
