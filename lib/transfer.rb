@@ -23,7 +23,7 @@ class Transfer
         "Transaction was already exucted"
       else
         @status = "rejected"
-        return "Transaction rejected. Please check your account balance."
+        puts "Transaction rejected. Please check your account balance."
       end
     end
 
