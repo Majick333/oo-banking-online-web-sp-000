@@ -20,7 +20,7 @@ class Transfer
         @receiver.balance += @amount
         @status = "complete"
 
-      elsif @status == "complete"
+      elsif @sender.status == "complete"
         return "Transaction already completed."
 
       else
