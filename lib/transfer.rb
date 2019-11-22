@@ -15,7 +15,7 @@ class Transfer
     end
 
     def execute_transaction
-      if self.status == "complete"
+      if self.status == "complete" #this function must come first to prevent repeat transactions
         return "Transaction already completed."
 
       elsif @sender.valid? && @receiver.valid? == true  && sender.balance > amount
