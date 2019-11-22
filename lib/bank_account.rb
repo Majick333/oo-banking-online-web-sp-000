@@ -13,7 +13,7 @@ class BankAccount
     end
 
     def display_balance
-      print "Your balance is #{self.balance.to_s}."
+      @balance
     end
 
     def valid?
