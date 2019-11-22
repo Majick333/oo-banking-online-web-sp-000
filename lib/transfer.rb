@@ -21,7 +21,7 @@ class Transfer
         @status = "complete"
       end
 
-      elsif self.status == "complete"
+      if self.status == "complete"
         return "Transaction already completed."
 
       else
@@ -29,6 +29,7 @@ class Transfer
         return "Transaction rejected. Please check your account balance."
       end
     end
+  end
 
     def reverse_transfer
       if @status == "complete"
