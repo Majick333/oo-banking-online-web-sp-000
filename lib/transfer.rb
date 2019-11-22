@@ -21,7 +21,7 @@ class Transfer
         @status = "complete"
       else
         @status = "rejected"
-        return "Transaction rejected"
+        return "Transaction rejected. Please che k your account balance."
       end
     end
 
