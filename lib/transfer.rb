@@ -18,9 +18,9 @@ class Transfer
       if @sender.valid? && @receiver.valid? == true  && sender.balance > amount
         @sender.balance -= @amount
         @receiver.balance += @amount
-        self.status = "complete"
+        @status = "complete"
       elsif @status == "complete"
-        return "Transaction was already exucted"
+        puts "Transaction was already executed"
       else
         @status = "rejected"
         return "Transaction rejected. Please check your account balance."
